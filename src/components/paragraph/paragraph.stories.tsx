@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Paragraph } from "./paragraph";
+import { Paragraph } from ".";
 
 const meta: Meta<typeof Paragraph> = {
   component: Paragraph,
