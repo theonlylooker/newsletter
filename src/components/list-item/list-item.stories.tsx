@@ -9,6 +9,6 @@ const meta: Meta<typeof ListItem> = {
 export default meta;
 type Story = StoryObj<typeof ListItem>;
 
-export const Primary: Story = {
+export const BaseListItem: Story = {
   args: { children: "Product discovery and building what matters" },
 };

@@ -9,6 +9,6 @@ const meta: Meta<typeof InputText> = {
 export default meta;
 type Story = StoryObj<typeof InputText>;
 
-export const Base: Story = {
+export const BaseInput: Story = {
   args: { children: "Email address", id: "email" },
 };
