@@ -6,7 +6,7 @@ interface ListItem {
 }
 export const ListItem: FC<ListItem> = ({ children }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex font-medium text-myPrimary items-start gap-5">
       <Check></Check>
       {children}
     </div>

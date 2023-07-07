@@ -4,5 +4,5 @@ interface Paragraph {
   children: React.ReactNode;
 }
 export const Paragraph: FC<Paragraph> = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="text-myPrimary font-medium">{children}</div>;
 };

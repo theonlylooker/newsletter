@@ -6,7 +6,7 @@ interface InputText {
 }
 export const InputText: FC<InputText> = ({ children, id }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-1">
       <div>
         <label className="font-bold text-xs" htmlFor={id}>
           {children}

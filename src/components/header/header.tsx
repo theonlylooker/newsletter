@@ -8,7 +8,7 @@ export const Header: FC<Header> = ({ children, size }) => {
   switch (size) {
     case "lg":
       return (
-        <div className="text-5xl font-semibold text-myPrimary">{children}</div>
+        <div className="text-4xl font-semibold text-myPrimary">{children}</div>
       );
     default:
       return (
