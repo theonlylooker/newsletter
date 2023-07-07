@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         myPrimary: "#282444",
+        myBg: "#383c4c",
       },
       boxShadow: {
         orange: "-5px 20px 25px -5px rgb(255 100 68 / 0.25);",
