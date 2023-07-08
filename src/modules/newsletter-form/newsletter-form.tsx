@@ -14,6 +14,7 @@ export const NewsletterForm = () => {
     e.preventDefault();
     navigate("/success");
   };
+
   return (
     <div className="flex flex-col bg-white m-auto max-w-3xl h-screen sm:flex-row-reverse sm:items-center sm:h-min sm:p-4 sm:rounded-lg">
       <picture className="mx-auto">
