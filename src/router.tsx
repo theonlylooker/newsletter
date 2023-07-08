@@ -6,12 +6,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <NewsletterForm />,
-    children: [
-      {
-        path: "/success",
-        element: <NewsletterSuccess />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "success",
+    //     element: <NewsletterSuccess />,
+    //   },
+    // ],
+  },
+  {
+    path: "/success",
+    element: <NewsletterSuccess />,
   },
 ]);
 

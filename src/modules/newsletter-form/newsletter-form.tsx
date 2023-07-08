@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import desktop from "../../assets/illustration-sign-up-desktop.svg";
 import mobile from "../../assets/illustration-sign-up-mobile.svg";
 import {
@@ -8,6 +9,11 @@ import {
   Paragraph,
 } from "../../components";
 export const NewsletterForm = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate("/success");
+  };
   return (
     <div className="flex flex-col bg-white m-auto max-w-3xl h-screen sm:flex-row-reverse sm:items-center sm:h-min sm:p-4 sm:rounded-lg">
       <picture className="mx-auto">
@@ -24,7 +30,7 @@ export const NewsletterForm = () => {
           <ListItem>Measuring to ensure updates are a success </ListItem>
           <ListItem>And much more! </ListItem>
         </ul>
-        <form className="pt-5 flex flex-col gap-5 " action="">
+        <form className="pt-5 flex flex-col gap-5 " onSubmit={handleSubmit}>
           <InputText id="email">Email address</InputText>
           <Button size="large">Subscribe to monthly newsletter</Button>
         </form>
