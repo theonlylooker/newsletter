@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useForm, SubmitHandler } from "react-hook-form";
 import desktop from "../../assets/illustration-sign-up-desktop.svg";
 import mobile from "../../assets/illustration-sign-up-mobile.svg";
 import {
@@ -8,13 +9,26 @@ import {
   ListItem,
   Paragraph,
 } from "../../components";
+
+type Inputs = {
+  email: string;
+};
+
 export const NewsletterForm = () => {
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate("/success", { state: { email: "soy un email via state" } });
-  };
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  console.log(watch("email"));
+  console.log(errors);
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   navigate("/success", { state: { email: "soy un email via state" } });
+  // };
 
   return (
     <div className="flex flex-col bg-white m-auto max-w-3xl h-screen sm:flex-row-reverse sm:items-center sm:h-min sm:p-4 sm:rounded-lg">
@@ -32,8 +46,22 @@ export const NewsletterForm = () => {
           <ListItem>Measuring to ensure updates are a success </ListItem>
           <ListItem>And much more! </ListItem>
         </ul>
-        <form className="pt-5 flex flex-col gap-5 " onSubmit={handleSubmit}>
-          <InputText id="email">Email address</InputText>
+        <form
+          className="pt-5 flex flex-col gap-5 "
+          onSubmit={handleSubmit((data) => {
+            navigate("/success", {
+              state: { email: data.email },
+            });
+          })}
+        >
+          <InputText
+            id="email"
+            register={register}
+            name={"email"}
+            errors={errors}
+          >
+            Email address
+          </InputText>
           <Button size="large">Subscribe to monthly newsletter</Button>
         </form>
       </div>
