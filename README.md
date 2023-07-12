@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL here](https://github.com/theonlylooker/newsletter)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://newsletter-x0ui.onrender.com/)
 
 ## My process
 
@@ -62,7 +62,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Eduardo Rolando Basurco Cayllahua](https://eduardobasurco.netlify.app/)
+- Frontend Mentor - [@theonlylooker](https://www.frontendmentor.io/profile/yourusername)
 
