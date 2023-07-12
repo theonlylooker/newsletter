@@ -1,9 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Check } from "../../assets";
 import { Button, Header, Paragraph } from "../../components";
 
 export const NewsletterSuccess = () => {
+  interface propState {
+    email: string;
+  }
   const navigate = useNavigate();
+  const location = useLocation();
+  const { email } = location.state as propState;
   const handleReturn = (e: React.FormEvent) => {
     e.preventDefault();
     navigate("/");
@@ -15,7 +20,7 @@ export const NewsletterSuccess = () => {
         <div className="flex flex-col gap-5 max-w-[300px]">
           <Header size="lg">Thanks for subscribing!</Header>
           <Paragraph>
-            A confirmation email has been sent to email. Please open it and
+            A confirmation email has been sent to {email}. Please open it and
             click the button inside to confirm your subscription
           </Paragraph>
         </div>

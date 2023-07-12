@@ -10,9 +10,10 @@ import {
 } from "../../components";
 export const NewsletterForm = () => {
   const navigate = useNavigate();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/success");
+    navigate("/success", { state: { email: "soy un email via state" } });
   };
 
   return (
